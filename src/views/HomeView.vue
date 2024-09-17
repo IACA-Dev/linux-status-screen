@@ -34,11 +34,15 @@ main {
     width: 100vw;
     justify-content: center;
     align-items: center;
+
+    background-color: #00b80b;
 }
 
 .horloge {
-    font-size: 8vw;
+    font-size: 10vw;
     font-weight: normal;
+
+    color: white;
 }
 
 </style>
