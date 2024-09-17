@@ -1,4 +1,4 @@
-# IACA Ping System Web UI
+# System status screen
 
 * Vue 3
 * Typescript
