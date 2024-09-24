@@ -5,7 +5,7 @@ LABEL authors="IACA Electronique"
 WORKDIR /app
 COPY . .
 
-RUN npm i && vue-cli-service build
+RUN npm i && ./node_modules/.bin/vue-cli-service build
 
 # Stage 2 : Runtime
 FROM node:18.19.1-alpine
@@ -13,7 +13,7 @@ LABEL authors="IACA Electronique"
 
 WORKDIR /app
 
-COPY dist dist
+COPY --from=builder /app/dist dist
 COPY docker/entrypoint.sh .
 COPY docker/utils.sh .
 COPY docker/app.js .
