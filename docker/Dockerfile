@@ -1,4 +1,15 @@
+#  Stage 1 : Build
+FROM node:18.19.1-alpine AS builder
+LABEL authors="IACA Electronique"
+
+WORKDIR /app
+COPY . .
+
+RUN npm i && vue-cli-service build
+
+# Stage 2 : Runtime
 FROM node:18.19.1-alpine
+LABEL authors="IACA Electronique"
 
 WORKDIR /app
 
