@@ -9,6 +9,7 @@
 
 import {Component, Vue} from "vue-facing-decorator";
 import HorlogeComponent from "@/components/HorlogeComponent.vue";
+import HorlogeComponent from "@/components/business/HorlogeComponent.vue";
 
 @Component({
     components: {HorlogeComponent}
