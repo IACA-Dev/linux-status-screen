@@ -1,7 +1,12 @@
 <template>
     <main>
         <horloge-component class="horloge"/>
-        <vitals-tile/>
+        <div class="vitals-container">
+            <vitals-tile value="cpu" />
+            <vitals-tile value="ram-percent" />
+            <vitals-tile value="ram" />
+            <vitals-tile value="ram-total" />
+        </div>
     </main>
 </template>
 
@@ -34,8 +39,9 @@ main {
     display: flex;
     height: 100vh;
     width: 100vw;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    flex-direction: column;
 
     background-color: #00b80b;
 }
@@ -45,6 +51,15 @@ main {
     font-weight: normal;
 
     color: white;
+}
+
+.vitals-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 10px;
 }
 
 </style>
