@@ -1,6 +1,7 @@
 <template>
     <main>
         <horloge-component class="horloge"/>
+        <vitals-tile/>
     </main>
 </template>
 
@@ -8,11 +9,11 @@
 
 
 import {Component, Vue} from "vue-facing-decorator";
-import HorlogeComponent from "@/components/HorlogeComponent.vue";
 import HorlogeComponent from "@/components/business/HorlogeComponent.vue";
+import VitalsTile from "@/components/business/VitalsTile.vue";
 
 @Component({
-    components: {HorlogeComponent}
+    components: {VitalsTile, HorlogeComponent}
 })
 
 export default class HomeView extends Vue {
