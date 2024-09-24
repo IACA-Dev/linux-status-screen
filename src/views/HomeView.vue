@@ -1,6 +1,7 @@
 <template>
     <main>
         <horloge-component class="horloge"/>
+        <local-interface-component/>
         <div class="vitals-container">
             <vitals-tile value="cpu" />
             <vitals-tile value="ram-percent" />
@@ -16,9 +17,10 @@
 import {Component, Vue} from "vue-facing-decorator";
 import HorlogeComponent from "@/components/business/HorlogeComponent.vue";
 import VitalsTile from "@/components/business/VitalsTile.vue";
+import LocalInterfaceComponent from "@/components/business/LocalInterfaceComponent.vue";
 
 @Component({
-    components: {VitalsTile, HorlogeComponent}
+    components: {LocalInterfaceComponent, VitalsTile, HorlogeComponent}
 })
 
 export default class HomeView extends Vue {
@@ -47,7 +49,7 @@ main {
 }
 
 .horloge {
-    font-size: 10vw;
+    font-size: 2.5vw;
     font-weight: normal;
 
     color: white;
